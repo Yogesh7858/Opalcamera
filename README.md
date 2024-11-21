@@ -14,16 +14,17 @@
 
  ## 📂 Project Structure
 ├── components/
-│   ├── Header.js        # Navigation header component
-│   ├── Hero.js          # Hero section component
-│   ├── Card.js          # Reusable feature card components
-│   ├── Footer.js        # Footer section component
+│   ├── Header.js        
+│   ├── Banner.js         
+│   ├── Card.js         
+│   ├── Footer.js    
+│   ├── ClientHeader.js   
 ├── pages/
-│   ├── index.js         # Main landing page
-├── public/              # Static assets (images, icons, etc.)
-├── styles/              # Tailwind CSS configuration or global styles
-├── package.json         # Project dependencies and scripts
-└── README.md            # Project documentation
+│   ├── index.js        
+├── public              
+├── styles              
+├── package.json        
+└── README.md           
 
 ## Usage
 
@@ -45,7 +46,7 @@
     -- or
     - yarn dev
 
-##🌟 Features and Implementation
+## 🌟 Features and Implementation
 
 1. Header
  - A sticky navigation bar with the site logo and navigation links.
@@ -67,22 +68,4 @@
 
 
 
-## 🤝 Contributing
-
-- Contributions are welcome! Follow these steps to contribute:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature-name`).
-3. Commit your changes (`git commit -am 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature-name`).
-5. Create a new Pull Request.
-
-## 📜 License
-
-- This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙌 Acknowledgements
-
-- Inspired by the sleek design of the Opal Camera website.
-- Special thanks to the developers of Next.js and Tailwind CSS  for their incredible tools.
-- Special thanks to Circuit House Company for providing me with this project and the opportunity to recreate such an engaging landing section.
 
