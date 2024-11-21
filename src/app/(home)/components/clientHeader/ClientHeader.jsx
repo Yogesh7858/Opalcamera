@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-function ClientHeaderLogic() {
+function ClientHeaderLogic({data}) {
   const [hideItems, setHideItems] = useState(false);
 
   useEffect(() => {
@@ -28,97 +28,30 @@ function ClientHeaderLogic() {
            </div>
 
            <div className="text-white mt-3 ml-6 flex justify-center gap-x-12 bmd:hidden ">
-             <ul className="flex-col gap-y-3 flex">
-               <li>
-                 <a href="#" className="">
-                   Products
-                 </a>
-               </li>
-               <li
-                 className={`opacity-[0.4] transition-item ${
-                   hideItems ? "hidden-item" : ""
-                 }`}
-               >
-                 Tadpole
-               </li>
-               <li
-                 className={`opacity-40 transition-item ${
-                   hideItems ? "hidden-item" : ""
-                 }`}
-               >
-                 C1
-               </li>
-               <li
-                 className={`opacity-40 transition-item ${
-                   hideItems ? "hidden-item" : ""
-                 }`}
-               >
-                 Composer
-               </li>
-             </ul>
-             <ul className="flex-col flex gap-y-3">
-               <li>
-                 <a href="#" className="">
-                   Company
-                 </a>
-               </li>
-               <li
-                 className={`opacity-40 transition-item ${
-                   hideItems ? "hidden-item" : ""
-                 }`}
-               >
-                 About
-               </li>
-               <li
-                 className={`opacity-40 transition-item ${
-                   hideItems ? "hidden-item" : ""
-                 }`}
-               >
-                 Terms
-               </li>
-               <li
-                 className={`opacity-40 transition-item ${
-                   hideItems ? "hidden-item" : ""
-                 }`}
-               >
-                 Privacy
-               </li>
-             </ul>
-             <ul className="flex-col flex gap-y-3">
-               <li>
-                 <a href="#" className="">
-                   Resources
-                 </a>
-               </li>
-               <li
-                 className={`opacity-40 transition-item ${
-                   hideItems ? "hidden-item" : ""
-                 }`}
-               >
-                 Support
-               </li>
-               <li
-                 className={`opacity-40 transition-item ${
-                   hideItems ? "hidden-item" : ""
-                 }`}
-               >
-                 Media Kit
-               </li>
-               <li
-                 className={`opacity-40 transition-item ${
-                   hideItems ? "hidden-item" : ""
-                 }`}
-               >
-                 Downloads
-               </li>
-               <li
-                 className={`opacity-40 transition-item ${
-                   hideItems ? "hidden-item" : ""
-                 }`}
-               >
-                 Newsletter
-               </li>
-             </ul>
+
+            { data.map((curr,index)=>{
+              return (
+                <ul key={index} className="flex-col gap-y-3 flex">
+                  <li>
+                    <a href="#" className="">
+                      {curr.title}
+                    </a>
+                  </li>
+                  {curr.content.map((newElement,index)=>{
+                    return (
+                      <li key={index}
+                        className={`opacity-[0.4] transition-item ${
+                          hideItems ? "hidden-item" : ""
+                        }`}
+                      >
+                        {newElement}
+                      </li>
+                    )
+                  })}
+                </ul>
+              )
+            })
+            }
            </div>
          </div>
 

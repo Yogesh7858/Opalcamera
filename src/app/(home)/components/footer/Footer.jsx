@@ -1,6 +1,5 @@
 import React from "react";
-
-function Footer() {
+function Footer({data}) {
   return (
     <div className="footer bg-white px-0 lg:px-20">
       <div className="footer-menu w-full px-2 bg-white flex justify-between">
@@ -34,62 +33,24 @@ function Footer() {
         </div>
         <div className="right-section md:w-1/2 w-full basis-[100%] md:basis-1/2 py-6 md:p-0">
           <div className="text-xs font-semibold flex gap-2 md:gap-7 justify-around leading-8">
-            <div>
-              <ul>
-                <li className="mb-3 text-neutral-400">Products</li>
-                <a href="#">
-                  <li className="hover:text-neutral-400">Tadpole</li>
-                </a>
-                <a href="#">
-                  <li className="hover:text-neutral-400">OPal C1</li>
-                </a>
-                <a href="#">
-                  <li className="hover:text-neutral-400">Composer</li>
-                </a>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li className="mb-3 text-neutral-400">Company</li>
-                <a href="#">
-                  <li className="hover:text-neutral-400">About</li>
-                </a>
-                <a href="#">
-                  <li className="hover:text-neutral-400">Terms</li>
-                </a>
-                <a href="#">
-                  <li className="hover:text-neutral-400">Privacy</li>
-                </a>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li className="mb-3 text-neutral-400">Resources</li>
-                <a href="#">
-                  <li className="hover:text-neutral-400">Support</li>
-                </a>
-                <a href="#">
-                  <li className="hover:text-neutral-400">Media Kit</li>
-                </a>
-                <a href="#">
-                  <li className="hover:text-neutral-400">Downloads</li>
-                </a>
-                <a href="#">
-                  <li className="hover:text-neutral-400">Newsletter</li>
-                </a>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li className="mb-3 text-neutral-400">Social</li>
-                <a href="#">
-                  <li className="hover:text-neutral-400">Instagram</li>
-                </a>
-                <a href="#">
-                  <li className="hover:text-neutral-400">Twitter</li>
-                </a>
-              </ul>
-            </div>
+
+            { data.map((curr,index)=>{
+                return (
+                  <div key={index}>
+                    <ul>
+                      <li className="mb-3 text-neutral-400">{curr.title}</li>
+                      {curr.content.map((newElement,index)=>{
+                        return(
+                            <a href="#">
+                            <li key={index} className="hover:text-neutral-400">{newElement}</li>
+                          </a>
+                        )
+                      })}
+                    </ul>
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
       </div>
@@ -115,3 +76,5 @@ function Footer() {
 }
 
 export default Footer;
+
+

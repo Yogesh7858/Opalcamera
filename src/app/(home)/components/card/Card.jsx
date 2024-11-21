@@ -39,8 +39,6 @@ function Card() {
               priority 
               className='mt-10'
             />
-            
-            
           </div>
         ))}
       </div>

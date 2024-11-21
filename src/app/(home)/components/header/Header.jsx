@@ -3,11 +3,11 @@ import React from "react";
 import Banner from "../Banner/Banner";
 import ClientHeaderLogic from "../clientHeader/ClientHeader"; 
 
-function Header() {
+function Header({data}) {
   return (
     <div className="header">
        
-        <ClientHeaderLogic />
+        <ClientHeaderLogic data={data}/>
 
         <Banner/>
     </div>

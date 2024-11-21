@@ -4,9 +4,42 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 
 export default function Home() {
+  const Footerdata=[
+    {
+      'title':'Products',
+      'content':['Tadpole','Opal C1','Composer']
+    },
+    {
+      'title':'Company',
+      'content':['About','Terms','Privacy']
+    },
+    {
+      'title':'Resources',
+      'content':['Support','Media Kit','Downloads','Newsletter']
+    },
+    {
+      'title':'Social',
+      'content':['Instagram','Twitter ']
+    }
+  ];
+
+  const headerData=[
+    {
+      'title':'Products',
+      'content':['Tadpole','Opal C1','Composer']
+    },
+    {
+      'title':'Company',
+      'content':['About','Terms','Privacy']
+    },
+    {
+      'title':'Resources',
+      'content':['Support','Media Kit','Downloads','Newsletter']
+    }
+  ];
   return (
     <main>
-      <Header />
+      <Header data={headerData}/>
       <Card />
       <Image
         src="/logo-black.png"
@@ -16,7 +49,7 @@ export default function Home() {
         priority
         className="mt-10 w-full h-full md:mb-[-4rem] mb-0 "
       />
-      <Footer />
+      <Footer data={Footerdata}/>
     </main>
   );
 }
