@@ -6,7 +6,7 @@ export default function Hero() {
       <div id="main" className="relative h-[90vh] w-full">
         <div className="hero-section__content  flex   items-center md:justify-start justify-center h-full">
           <div className="flex flex-col gap-12 p-8 bsm:px-1 ml-0 md:ml-12">
-            <div className="text-[20px] md:text-[32px] text-white z-10 flex justify-center">
+            <div className="text-[20px] md:text-[32px] text-white z-10 flex justify-center md:text-start text-center">
               <h1>
                 The first webcam
                 <br />
