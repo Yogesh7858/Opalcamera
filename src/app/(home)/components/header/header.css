@@ -1,0 +1,26 @@
+
+
+.custom-bg {
+  max-height: 900px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.opal {
+  font-size: 30px;
+}
+.transition-item {
+  transition: all 0.3s ease-out; 
+  opacity: 0.4;
+  transform: translateY(0); 
+}
+
+.hidden-item {
+  opacity: 0; 
+  transform: translateY(-10px); 
+  pointer-events: none; 
+}
+.newsletter-item {
+  pointer-events: none; 
+  display: none;
+}

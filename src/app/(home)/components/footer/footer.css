@@ -1,0 +1,11 @@
+.transition-item {
+  transition: all 0.3s ease-out; 
+  transform: translateY(0); 
+}
+
+.hidden-item {
+  opacity: 0; Fade out
+  transform: translateY(-10px); 
+  pointer-events: none; 
+}
+
