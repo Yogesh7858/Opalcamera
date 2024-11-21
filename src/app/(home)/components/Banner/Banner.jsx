@@ -4,9 +4,9 @@ export default function Hero() {
   return (
     <div>
       <div id="main" className="relative h-[90vh] w-full">
-        <div className="hero-section__content  flex   items-center justify-start h-full">
+        <div className="hero-section__content  flex   items-center md:justify-start justify-center h-full">
           <div className="flex flex-col gap-12 p-8 bsm:px-1">
-            <div className="text-[20px] md:text-[32px] text-white z-10">
+            <div className="text-[20px] md:text-[32px] text-white z-10 flex justify-center">
               <h1>
                 The first webcam
                 <br />
