@@ -6,20 +6,25 @@ import Hero from "../Hero/Hero";
 function Header() {
   const [hideItems, setHideItems] = useState(false);
 
-  const handleScroll = () => {
-    const currentScrollPos = window.scrollY;
-    const navbarElement = document.querySelector(".navbar-container");
-    if (currentScrollPos > 30) navbarElement.classList.add("top-0");
-    else navbarElement.classList.remove("top-0");
+  useEffect(()=>{
 
-    if (currentScrollPos <= 50) {
-      setHideItems(false);
-    } else {
-      setHideItems(true);
-    }
-  };
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const navbarElement = document.querySelector(".navbar-container");
+      if (currentScrollPos > 30) navbarElement.classList.add("top-0");
+      else navbarElement.classList.remove("top-0");
+  
+      if (currentScrollPos <= 50) {
+        setHideItems(false);
+      } else {
+        setHideItems(true);
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  },[])
 
-  window.addEventListener("scroll", handleScroll);
+  
 
   return (
     <div className="header">
