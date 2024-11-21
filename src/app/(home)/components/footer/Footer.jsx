@@ -15,7 +15,7 @@ function Footer({data}) {
               your inbox.
             </p>
             <button
-              className={`w-28 h-12 bg-[#080404] hover:bg-yellow-300 rounded-3xl justify-center items-center flex  `}
+              className={`w-28 h-12 bg-[#080404] hover:bg-yellow-400 rounded-3xl justify-center items-center flex  `}
             >
               <svg
                 width="40"

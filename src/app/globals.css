@@ -5,6 +5,9 @@
 body {
   font-family: Roobert;
 }
+/* :root {
+  --font-roobert: "Roobert", sans-serif;
+} */
 
 @layer base {
   :root {

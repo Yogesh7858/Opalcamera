@@ -22,11 +22,11 @@ function ClientHeaderLogic({data}) {
 
   return (
     <>
-      <nav className="bg-yellow-400 flex justify-center p-2 font-thin">
-          <h3>
+      <nav className="bg-yellow-400 flex justify-center p-2 font-thin text-[14px]">
+          <p>
             Take $50 off any order $200 USD or more with code 
             <span className="font-bold"> ANY50</span>
-          </h3>
+          </p>
         </nav>
       <div className={`navbar-container fixed z-[999] w-full flex p-3 justify-between bmd: ${hideItems ? "hidden" : ""}`}>
           <div className="flex gap-x-12 ">
