@@ -1,0 +1,67 @@
+/* .transitionEffect{
+    animation-duration: .5s;
+    animation-name: loading;
+} */
+.firstAnimation {
+  animation-duration: 1s;
+  animation-name: none;
+  animation-fill-mode: forwards; 
+}
+
+.firstAnimation span {
+  display: inline-block;
+  animation-fill-mode: forwards; 
+}
+
+.firstAnimation span:nth-child(1) {
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-name: first;
+  animation-fill-mode: forwards;
+}
+
+.firstAnimation span:nth-child(3) {
+  animation-delay: 0.2s; 
+  animation-duration: 1s;
+  animation-name: first;
+  animation-fill-mode: forwards;
+}
+
+@keyframes first {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* 
+@keyframes loading {
+    0% {
+        transform: translateX(-15%) translateZ(0px); 
+        opacity: 0; 
+      }
+      20% {
+        transform: translateX(-12%) translateZ(0px); 
+        opacity: 0.05; 
+      }
+      40% {
+        transform: translateX(-9%) translateZ(0px); 
+        opacity: 0.1; 
+      }
+      60% {
+        transform: translateX(-6%) translateZ(0px); 
+        opacity: 0.2; 
+      }
+      80% {
+        transform: translateX(-3%) translateZ(0px); 
+        opacity: 0.3; 
+      }
+      100% {
+        transform: translateX(0%) translateZ(0px); 
+        
+      }
+} */

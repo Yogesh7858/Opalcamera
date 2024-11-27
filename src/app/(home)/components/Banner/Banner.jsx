@@ -1,19 +1,20 @@
 import React from 'react'
+import './banner.css'
 
 export default function Hero() {
   return (
     <div>
       <div id="main" className="relative h-[90vh] w-full">
-        <div className="hero-section__content  flex   items-center md:justify-start justify-center h-full">
-          <div className="flex flex-col gap-12 p-8 bsm:px-1 ml-0 md:ml-12">
-            <div className="text-[20px] md:text-[32px] text-white z-10 flex justify-center md:text-start text-center">
+        <div className="hero-section__content  flex   items-center md:justify-start justify-center h-full ">
+          <div className="flex flex-col gap-12 p-8 bsm:px-1 ml-0 md:ml-12 ">
+            <div className="text-[20px] md:text-[32px] text-white z-10 flex justify-center md:text-start text-center firstAnimation">
               <h1>
-                The first webcam
+                <span >The first webcam</span>
                 <br />
-                designed for laptops.
+                <span>designed for laptops.</span> 
               </h1>
             </div>
-            <button className="w-52 h-10 bg-yellow-400 rounded-2xl z-10">
+            <button style={{"animation-duration":"1s"}} className="w-52 h-10 bg-yellow-400 rounded-2xl z-10 open-items ">
               Available now for $149.
             </button>
           </div>

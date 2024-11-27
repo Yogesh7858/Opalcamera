@@ -28,7 +28,7 @@ function ClientHeaderLogic({data}) {
             <span className="font-bold"> ANY50</span>
           </p>
         </nav>
-      <div className={`navbar-container fixed z-[999] w-full flex p-3 justify-between bmd: ${hideItems ? "hidden" : ""}`}>
+      <div className={`navbar-container fixed z-[999] w-full flex p-3 justify-between bmd:${hideItems ? "hidden" : ""}`}>
           <div className="flex gap-x-12 ">
             <div className="invert font-large opal">
               <a href="#">Opal</a>
@@ -38,20 +38,23 @@ function ClientHeaderLogic({data}) {
 
               { data.map((curr,index)=>{
                 return (
-                  <ul key={index} className="flex-col gap-y-3 flex">
-                    <li>
-                      <a href="#" className="">
-                        {curr.title}
-                      </a>
+                  <ul key={index} className="flex-col gap-y-3 flex ">
+                    <li  className="overflow-hidden ">
+                        <div className="open-items">{curr.title}</div>
                     </li>
                     {curr.content.map((newElement,index)=>{
                       return (
                         <li key={index}
-                          className={`opacity-[0.4] transition-item ${
-                            hideItems ? "hidden-item" : ""
-                          }`}
-                        >
-                          {newElement}
+                        className="overflow-hidden "
+                          >
+                            <div className={`opacity-40 ${
+                              hideItems ? "hidden-item " : "open-items"
+                            }`}>
+                            <a href="#" className="opacity-40">
+                            {newElement}
+                            </a>
+                            </div>
+                            
                         </li>
                       )
                     })}
@@ -82,14 +85,14 @@ function ClientHeaderLogic({data}) {
 
             <div className="flex justify-between pt-16 bmd:hidden">
               <h2
-                className={`text-2xl transition-item ${
-                  hideItems ? "newsletter-item" : ""
+                className={`opacity-[0.4] text-2xl transition-item ${
+                  hideItems ?  "hidden-item " : "open-items"
                 } `}
               >
                 Newsletter
               </h2>
               <button
-                className={`w-28 h-12 hover:bg-[rgb(72,101,213)] rounded-3xl justify-center items-center flex bg-[rgba(255,255,255,0.4)] ${
+                className={` transitionEffect w-28 h-12 hover:bg-[rgb(72,101,213)] rounded-3xl justify-center items-center flex bg-[rgba(255,255,255,0.4)] ${
                   hideItems ? "newsletter-item" : ""
                 }`}
               >
@@ -106,8 +109,8 @@ function ClientHeaderLogic({data}) {
             </div>
 
             <div
-              className={`!opacity-100 bmd:hidden text-[12px] text-slate-400 transition-item pt-3 ${
-                hideItems ? "newsletter-item" : ""
+              className={` bmd:hidden text-[12px] text-slate-400 transition-item pt-3 ${
+                hideItems ?  "hidden-item " : "open-items"
               }`}
             >
               <i>
