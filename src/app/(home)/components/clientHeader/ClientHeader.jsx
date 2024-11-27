@@ -85,11 +85,11 @@ function ClientHeaderLogic({data}) {
 
             <div className="flex justify-between pt-16 bmd:hidden">
               <h2
-                className={`opacity-[0.4] text-2xl transition-item ${
+                className={` text-2xl transition-item ${
                   hideItems ?  "hidden-item " : "open-items"
                 } `}
               >
-                Newsletter
+                <span className="opacity-[0.4]">Newsletter</span>
               </h2>
               <button
                 className={` transitionEffect w-28 h-12 hover:bg-[rgb(72,101,213)] rounded-3xl justify-center items-center flex bg-[rgba(255,255,255,0.4)] ${
